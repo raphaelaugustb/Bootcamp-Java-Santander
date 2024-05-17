@@ -18,5 +18,6 @@ public class ContaTerminal {
             double valorSolicitado = 22;
             double saldoAtual = verificarSaldo(saldo, valorSolicitado);
             System.out.println(saldoAtual);
-        }
+
+    }
 }
