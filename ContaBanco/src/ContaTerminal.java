@@ -19,7 +19,7 @@ public class ContaTerminal {
     public static void main(String[] args) {
             Scanner pegarDadosUsuario = new Scanner(System.in).useLocale(Locale.US);
             double saldo = 15;
-            double valorSolicitado;
+            double valorSolicitado = 22;
             System.out.println( "Saldo Atual: "+ saldo + " reais. \nValor do saldo a ser alterado: ");
             saldo = pegarDadosUsuario.nextDouble();
             System.out.println("Valor Solicitado:");
