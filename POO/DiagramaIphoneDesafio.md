@@ -1,3 +1,27 @@
 <h1>Desafio que consiste em criar um diagrama com funcionalidades do Iphone 2007</h1>
 
-[![](https://mermaid.ink/img/pako:eNptksFuwjAMhl8lyglUeIFqF7RdOAyhMe3Ui0lMay2NKzdBG6zvvpSWiqnrJbX9258d56oNW9S5Ng7a9oWgFKgLr9K3bSr2qJ5-1mv1ho2wjYHlNbZkwM0lmwYEXcXv6PDEngzPNTs4YwmWZesDisfQSwbZjT_nXIeoUllgA7JYTnYDsf3jaBPYEHsYcxeHIORLVd-sSTec3SN13vqETXUdlYkzFvOxRuHlQxgCeosPjSQfpRoE8swiSPzBl3v0H_jsTtQIz_CLjiR7KMlPw0Rxd1AGloZ5d3yGzREWy4mQuorg6AL39DGp0yudBqiBbNr5DVToUGGNhc7TrwX5LHThex2kNRy-vdF5kIgrLRzLSucncG2yYmPT5OODmbxoqd_d-KT6o_sFFuXFdQ?type=png)](https://mermaid.live/edit#pako:eNptksFuwjAMhl8lyglUeIFqF7RdOAyhMe3Ui0lMay2NKzdBG6zvvpSWiqnrJbX9258d56oNW9S5Ng7a9oWgFKgLr9K3bSr2qJ5-1mv1ho2wjYHlNbZkwM0lmwYEXcXv6PDEngzPNTs4YwmWZesDisfQSwbZjT_nXIeoUllgA7JYTnYDsf3jaBPYEHsYcxeHIORLVd-sSTec3SN13vqETXUdlYkzFvOxRuHlQxgCeosPjSQfpRoE8swiSPzBl3v0H_jsTtQIz_CLjiR7KMlPw0Rxd1AGloZ5d3yGzREWy4mQuorg6AL39DGp0yudBqiBbNr5DVToUGGNhc7TrwX5LHThex2kNRy-vdF5kIgrLRzLSucncG2yYmPT5OODmbxoqd_d-KT6o_sFFuXFdQ)
+```mermaid
+classDiagram
+    Iphone <|-- ReprodutorMusical
+    Iphone <|-- AparelhoTelefonico
+    Iphone <|-- NavegadorInternet
+  
+    class ReprodutorMusical{
+      +tocar()
+      +pausar()
+      +selecionarMusica(String musica)
+      
+    }
+    class AparelhoTelefonico{
+        +ligar(String numero)
+        +atender()
+        +iniciarCorreioVoz()
+    
+    }
+    class NavegadorInternet {
+    +exibirPagina(String url)
+     +adicionarNovaAba()   
+    +atualizarPagina()
+    }
+
+```
