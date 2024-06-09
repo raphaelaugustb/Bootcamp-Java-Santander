@@ -1,5 +1,7 @@
 package casdastro;
 
+import java.util.List;
+
 public class Pessoa {
     private String nome;
     private String cpf;
@@ -22,4 +24,6 @@ public class Pessoa {
     }
     //...
     //setters de nome e cpf ?
+
+
 }
