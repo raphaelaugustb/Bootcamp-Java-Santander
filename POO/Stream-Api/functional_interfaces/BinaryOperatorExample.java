@@ -18,7 +18,7 @@ public class BinaryOperatorExample {
 
     // Usar o BinaryOperator para somar todos os números no Stream
     int resultado = numeros.stream()
-        .reduce(0, Integer::sum);
+        .reduce(0, (num1 , num2) -> num1+num2);
 
     // Imprimir o resultado da soma
     System.out.println("A soma dos números é: " + resultado);

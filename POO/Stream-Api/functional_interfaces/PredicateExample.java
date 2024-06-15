@@ -19,7 +19,7 @@ public class PredicateExample {
     // Usar o Stream para filtrar as palavras com mais de 5 caracteres e, em seguida,
     // imprimir cada palavra que passou no filtro
     palavras.stream()
-        .filter(maisDeCincoCaracteres)
+        .filter(p -> p.length() > 5)
         .forEach(System.out::println);
   }
 }
