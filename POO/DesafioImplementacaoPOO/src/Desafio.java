@@ -50,6 +50,8 @@ public class Desafio {
             cofreDigital.imprimirInformacoes();
             if (!(cofreDigital.validarSenha(scanner.nextInt()))){
                 System.out.println("Senha Incorreta!");
+            } else {
+                System.out.println("Cofre Aberto!");
             }
         } if (tipoCofre.equalsIgnoreCase("fisico")){
         CofreFisico cofreFisico = new CofreFisico();
