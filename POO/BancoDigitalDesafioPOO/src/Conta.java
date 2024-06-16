@@ -48,10 +48,18 @@ public class Conta implements IConta {
                 ", cliente=" + cliente +
                 '}';
     }
-
+    private boolean verificarSaldo(double valor){
+        if (this.saldo >= valor){
+            return true;
+        } else {
+            throw new ArithmeticException("Saldo Inválido");
+        }
+    }
     @Override
     public void sacar(double valor) {
-        saldo -= valor;
+        if (verificarSaldo(valor)){
+            saldo -= valor;
+        }
     }
 
     @Override
@@ -61,7 +69,9 @@ public class Conta implements IConta {
 
     @Override
     public void transferir(double valor, IConta contaDestino) {
-        this.sacar(valor);
+        if (verificarSaldo(valor)){
+            this.saldo = valor;
+        }
         contaDestino.depositar(valor);
     }
 
