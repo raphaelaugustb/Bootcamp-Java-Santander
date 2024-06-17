@@ -1,36 +1,28 @@
 package com.dio;
 
-public class Curso {
-    private String tittle;
-    private String description;
+public class Curso  extends Conteudo{
     private int workLoad;
 
     public Curso(String tittle, String description, int workLoad){
-        this.tittle = tittle;
-        this.description = description;
+        super(tittle, description);
         this.workLoad = workLoad;
     }
-    public String getTittle(){
-        return tittle;
-    }
 
-    public String getDescription() {
-        return description;
-    }
 
     public int getWorkLoad() {
         return workLoad;
     }
-    public void calcularXp(){
+    public double calcularXp(){
 
+        return XP_PADRAO + 10d;
     }
 
     @Override
     public String toString() {
         return "Curso{" +
-                "tittle='" + tittle + '\'' +
-                ", description='" + description + '\'' +
+                "tittle='" + getTittle()+ '\'' +
+                ", description='" + getDescription() + '\'' +
                 ", workLoad=" + workLoad +
-                '}';
+                "h}";
     }
 }

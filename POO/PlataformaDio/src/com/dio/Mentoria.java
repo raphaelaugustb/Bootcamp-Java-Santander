@@ -2,34 +2,25 @@ package com.dio;
 
 import java.time.LocalDate;
 
-public class Mentoria {
-    private String age;
-    private String description;
+public class Mentoria extends Conteudo{
     private LocalDate date;
 
-    public Mentoria(String age, String description,  LocalDate date){
-        this.age = age;
-        this.description = description;
+    public Mentoria(String tittle, String description, LocalDate date){
+        super(tittle,description);
         this.date = date;
     }
 
-    public String getAge() {
-        return age;
-    }
 
-    public LocalDate getDate() {
-        return date;
-    }
-
-    public String getDescription() {
-        return description;
+    @Override
+    public double calcularXp() {
+        return XP_PADRAO + 20d;
     }
 
     @Override
     public String toString() {
         return "Mentoria{" +
-                "age='" + age + '\'' +
-                ", description='" + description + '\'' +
+                "age='" + getTittle() + '\'' +
+                ", description='" + getDescription() + '\'' +
                 ", date=" + date +
                 '}';
     }
