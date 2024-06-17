@@ -1,6 +1,7 @@
 package com.dio;
 
 import com.dio.exception.InvalidBootcampException;
+import com.dio.exception.InvalidContentException;
 
 import java.awt.geom.IllegalPathStateException;
 import java.util.*;
@@ -34,6 +35,15 @@ public class Dev {
             soma += next;
         }
         return soma;
+    }
+    public void Studying() throws  InvalidContentException{
+        if (signedContents.isEmpty()){
+            throw new InvalidContentException("Você não está matriculado em nenhum conteúdo!");
+        } else {
+            Optional<Conteudo> addFinishedContents = signedContents.stream().findFirst();
+            finishedContent.add(addFinishedContents.get());
+            signedContents.remove(addFinishedContents.get());
+        }
     }
 
     public List<Conteudo> getSignedContents() {
