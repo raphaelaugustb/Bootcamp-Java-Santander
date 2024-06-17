@@ -24,6 +24,7 @@ public class Main {
 
         devCamila.addNewSignedBootcamp(bootcampJava);
         System.out.println("Conteúdos Inscritos Camila:" + devCamila.getSignedContents());
+        devCamila.addNewContent(new Curso("Curso HTML", "Descricao Curso HTML", 8));
         devCamila.studying();
         devCamila.studying();
         System.out.println("-");

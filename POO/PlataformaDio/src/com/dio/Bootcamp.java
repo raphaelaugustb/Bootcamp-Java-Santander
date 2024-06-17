@@ -7,12 +7,12 @@ import java.util.Objects;
 import java.util.Set;
 
 public class Bootcamp {
-    private String name;
-    private String description;
+    private final String name;
+    private final String description;
     private final LocalDate initialDate;
     private final LocalDate finalDate;
-    private Set<Dev> signedDevs;
-    private Set<Conteudo> contents;
+    private final Set<Dev> signedDevs;
+    private final Set<Conteudo> contents;
 
     public Bootcamp(String name, String description
     ) {

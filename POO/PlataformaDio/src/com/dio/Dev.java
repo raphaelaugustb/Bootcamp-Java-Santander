@@ -3,13 +3,12 @@ package com.dio;
 import com.dio.exception.InvalidBootcampException;
 import com.dio.exception.InvalidContentException;
 
-import java.awt.geom.IllegalPathStateException;
 import java.util.*;
 
 public class Dev {
-    private String  name;
-    private List<Conteudo> signedContents;
-    private List<Conteudo> finishedContent;
+    private final String  name;
+    private final List<Conteudo> signedContents;
+    private final List<Conteudo> finishedContent;
 
     public Dev(String name) {
         this.name = name;

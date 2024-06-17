@@ -3,7 +3,7 @@ package com.dio;
 import java.time.LocalDate;
 
 public class Mentoria extends Conteudo{
-    private LocalDate date;
+    private final LocalDate date;
     private double xp_adicional;
     public Mentoria(String tittle, String description, LocalDate date, double xp_adicional){
         super(tittle,description);

@@ -1,7 +1,7 @@
 package com.dio;
 
 public class Curso  extends Conteudo{
-    private int workLoad;
+    private final int workLoad;
 
     public Curso(String tittle, String description, int workLoad){
         super(tittle, description);
