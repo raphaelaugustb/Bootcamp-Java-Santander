@@ -20,9 +20,9 @@ public class Mentoria extends Conteudo{
     @Override
     public String toString() {
         return "Mentoria{" +
-                "age='" + getTittle() + '\'' +
+                "Tittle='" + getTittle() + '\'' +
                 ", description='" + getDescription() + '\'' +
-                ", date=" + date +
+                ", date=" + date + "XP=" + xp_adicional +
                 '}';
     }
 }

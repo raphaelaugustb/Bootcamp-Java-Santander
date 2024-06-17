@@ -37,10 +37,12 @@ public class Dev {
         return soma;
     }
     public void Studying() throws  InvalidContentException{
-        if (signedContents.isEmpty()){
+
+        Optional<Conteudo> addFinishedContents = signedContents.stream().findFirst();
+        if (signedContents.isEmpty() || addFinishedContents.isPresent()){
             throw new InvalidContentException("Você não está matriculado em nenhum conteúdo!");
         } else {
-            Optional<Conteudo> addFinishedContents = signedContents.stream().findFirst();
+
             finishedContent.add(addFinishedContents.get());
             signedContents.remove(addFinishedContents.get());
         }
