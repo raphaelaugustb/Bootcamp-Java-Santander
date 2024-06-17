@@ -3,8 +3,8 @@ package com.dio;
 public class Curso  extends Conteudo{
     private final int workLoad;
 
-    public Curso(String tittle, String description, int workLoad){
-        super(tittle, description);
+    public Curso(String title, String description, int workLoad){
+        super(title, description);
         this.workLoad = workLoad;
     }
 
@@ -19,7 +19,7 @@ public class Curso  extends Conteudo{
     @Override
     public String toString() {
         return "Curso{" +
-                "tittle='" + getTittle()+ '\'' +
+                "tittle='" + getTitle()+ '\'' +
                 ", description='" + getDescription() + '\'' +
                 ", workLoad=" + workLoad +
                 "h}";
