@@ -11,10 +11,10 @@ public class Dev {
     private List<Conteudo> signedContents;
     private List<Conteudo> finishedContent;
 
-    public Dev(String name, List<Conteudo> signedContents, List<Conteudo> finishedContent) {
+    public Dev(String name) {
         this.name = name;
-        this.signedContents = signedContents;
-        this.finishedContent = finishedContent;
+        this.signedContents = new ArrayList<>();
+        this.finishedContent = new ArrayList<>();
     }
     public void addNewSignedBootcamp(Bootcamp bootcamp) throws InvalidBootcampException {
         if (bootcamp.getContents().isEmpty()){
@@ -28,6 +28,11 @@ public class Dev {
     public void addNewContent(Conteudo content){
         signedContents.add(content);
     }
+
+    public List<Conteudo> getFinishedContent() {
+        return finishedContent;
+    }
+
     public double calcularTotalXp() {
         double soma = 0;
         for (Conteudo c : signedContents){
@@ -36,7 +41,7 @@ public class Dev {
         }
         return soma;
     }
-    public void Studying() throws  InvalidContentException{
+    public void studying() throws  InvalidContentException{
 
         Optional<Conteudo> addFinishedContents = signedContents.stream().findFirst();
         if (signedContents.isEmpty() || addFinishedContents.isPresent()){
