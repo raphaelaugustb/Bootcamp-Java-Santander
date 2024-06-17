@@ -14,7 +14,7 @@ public class Curso  extends Conteudo{
     }
     public double calcularXp(){
 
-        return XP_PADRAO + 10d;
+        return XP_PADRAO * workLoad;
     }
 
     @Override
