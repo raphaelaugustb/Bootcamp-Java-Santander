@@ -13,7 +13,6 @@ public class Curso  extends Conteudo{
         return workLoad;
     }
     public double calcularXp(){
-
         return XP_PADRAO * workLoad;
     }
 
