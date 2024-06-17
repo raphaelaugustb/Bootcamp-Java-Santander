@@ -41,10 +41,12 @@ public class Main {
         bootcampRuby.addNewContent(curso1_ruby);
         bootcampRuby.addNewContent(curso2_ruby);
         bootcampRuby.addNewContent(mentoria_ruby);
+        devJoao.addNewSignedBootcamp(bootcampRuby);
         System.out.println("Conteúdos Inscritos João:" + devJoao.getSignedContents());
         devJoao.studying();
         devJoao.studying();
         devJoao.studying();
+
         System.out.println("-------");
         System.out.println("Conteúdos Inscritos João:" +  devJoao.getSignedContents());
         System.out.println("Conteúdos Concluidos João:" +  devJoao.getFinishedContent());

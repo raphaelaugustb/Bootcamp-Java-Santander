@@ -44,7 +44,7 @@ public class Dev {
     public void studying() throws  InvalidContentException{
 
         Optional<Conteudo> addFinishedContents = signedContents.stream().findFirst();
-        if (signedContents.isEmpty() || addFinishedContents.isPresent()){
+        if (signedContents.isEmpty()){
             throw new InvalidContentException("Você não está matriculado em nenhum conteúdo!");
         } else {
 
