@@ -51,4 +51,13 @@ public class Dev {
     public List<Conteudo> getSignedContents() {
         return signedContents;
     }
+
+    @Override
+    public String toString() {
+        return "Dev{" +
+                "name='" + name + '\'' +
+                ", signedContents=" + signedContents +
+                ", finishedContent=" + finishedContent +
+                '}';
+    }
 }
