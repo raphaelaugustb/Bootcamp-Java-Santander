@@ -13,7 +13,6 @@ import lombok.Setter;
 public class Address {
 
     @Id
-    @GeneratedValue(strategy =  GenerationType.AUTO)
     private String cep;
     private String logradouro;
     private String complemento;
@@ -25,4 +24,19 @@ public class Address {
     private String ddd;
     private String siafi;
 
+    public Address(String logradouro, String complemento, String bairro, String localidade, String uf, String ibge, String gia, String ddd, String siafi, String cep) {
+        this.logradouro = logradouro;
+        this.complemento = complemento;
+        this.bairro = bairro;
+        this.localidade = localidade;
+        this.uf = uf;
+        this.ibge = ibge;
+        this.gia = gia;
+        this.ddd = ddd;
+        this.siafi = siafi;
+        this.cep = cep;
+    }
+
+    public Address() {
+    }
 }
