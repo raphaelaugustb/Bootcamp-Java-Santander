@@ -20,7 +20,11 @@ public class ClientService {
     private ViaCepService viaCepService;
 
     public Iterable<Client> listALLClient() {
-        return clientRepository.findAll();
+        if (clientRepository.findAll().isEmpty()) {
+            throw new RuntimeException("Lista vazia");
+        } else {
+            return clientRepository.findAll();
+        }
     }
 
     public Client getClientById(Long id) {
@@ -34,7 +38,7 @@ public class ClientService {
     public void changeClientInfo(Long id, Address address, String email) {
         Optional<Client> client = clientRepository.findById(id);
         if (client.isPresent()) {
-            client.get().setAdress(address);
+            client.get().setAddress(address);
             client.get().setEmail(email);
         } else {
             throw new RuntimeException("Cliente não está adicionado na base de dados");
@@ -43,13 +47,12 @@ public class ClientService {
     }
 
     public void insertClient(Client client) {
-        long idClient = client.getId();
-        String cep = client.getAdress().getCep();
-        Address clienteAddress = addressRepository.findById(client.getAdress().getCep()).orElseGet(() -> viaCepService.getAddressByCep(cep));
+        String cep = client.getAddress().getCep();
+        Address clienteAddress = addressRepository.findById(cep).orElseGet(() -> viaCepService.getAddressByCep(cep));
         addressRepository.save(clienteAddress);
-        client.setAdress(clienteAddress);
+        client.setAddress(clienteAddress);
 
-        if (!clientRepository.findById(idClient).isPresent()) {
+        if (!clientRepository.existsById(client.getId())) {
             clientRepository.save(client);
         } else {
             throw new RuntimeException("Cliente já está adicionado na base de dados");
