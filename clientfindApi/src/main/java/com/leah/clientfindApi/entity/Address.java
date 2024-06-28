@@ -10,7 +10,7 @@ import lombok.Setter;
 @Setter
 @Getter
 @Entity
-public class Endereco {
+public class Address {
 
     @Id
     @GeneratedValue(strategy =  GenerationType.AUTO)

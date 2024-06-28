@@ -15,16 +15,16 @@ public class Client {
     private String email;
     private String age;
     @ManyToOne
-    private Endereco endereco;
+    private Address adress;
 
     public Client() {
     }
 
-    public Client(Long id, String name, String email, String age, Endereco endereco) {
+    public Client(Long id, String name, String email, String age, Address adress) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.age = age;
-        this.endereco = endereco;
+        this.adress = adress;
     }
 }
