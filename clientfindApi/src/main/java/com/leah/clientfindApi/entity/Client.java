@@ -13,14 +13,14 @@ public class Client {
     private Long id;
     private String name;
     private String email;
-    private String age;
+    private int age;
     @ManyToOne
     private Address adress;
 
     public Client() {
     }
 
-    public Client(Long id, String name, String email, String age, Address adress) {
+    public Client(Long id, String name, String email, int age, Address adress) {
         this.id = id;
         this.name = name;
         this.email = email;
